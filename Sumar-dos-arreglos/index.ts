@@ -8,16 +8,16 @@ let indice: number;
 
 for (indice = 0; indice < dimensionArreglo; indice++) {
   arreglo1[indice] = Number(
-    prompt("Ingrese numero en arreglo 1, posicion " + indice)
+    prompt("Ingrese numero en arreglo A, posicion " + indice)
   );
   arreglo2[indice] = Number(
-    prompt("Ingrese numero en arreglo 2, posicion " + indice)
+    prompt("Ingrese numero en arreglo B, posicion " + indice)
   );
   arreglo3[indice] = arreglo1[indice] + arreglo2[indice];
 }
 for (indice = 0; indice < dimensionArreglo; indice++) {
   console.log(
-    "La suma de ambos arreglos es: posicion " +
+    "La suma de cada posicion en ambos arreglos es: posicion " +
       indice +
       " = " +
       arreglo3[indice]

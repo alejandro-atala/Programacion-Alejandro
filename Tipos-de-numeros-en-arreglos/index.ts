@@ -9,16 +9,14 @@ let pos: number = 0;
 let neg: number = 0;
 
 for (indice = 0; indice < dimensioArreglo; indice++) {
-  input = Number(prompt("Ingrese numeros posicion " + indice));
+  input = Number(prompt("Ingrese numeros, posicion " + indice));
   arreglo[indice] = input;
 
-  if (input == 0) {
-    ceros = ceros + 1;
-  } else if (input < 0) {
+  if (input < 0) {
     neg = neg + 1;
   } else if (input > 0) {
     pos = pos + 1;
-  }
+  } else ceros = ceros + 1;
 }
 
 console.log("Cantidad de ceros: " + ceros);
