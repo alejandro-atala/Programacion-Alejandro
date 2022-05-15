@@ -4,8 +4,8 @@ rotulo1.innerHTML = "Ingrese numero de la tabla";
 rotulo2.innerHTML = "Ingrase hasta que numero desea multiplicar";
 let btnEnv = document.getElementById("btnEnviar");
 
-let input1: number = document.getElementById("input1");
-let input2: number = document.getElementById("input2");
+let input1: number = document.getElementById("dato1");
+let input2: number = document.getElementById("dato2");
 let cont: number;
 let salida: number = 0;
 
