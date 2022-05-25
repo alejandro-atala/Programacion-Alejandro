@@ -15,11 +15,12 @@ function ingresoButacas(cant: number) {
 function seleccion(cant: number) {
   for (let indice2 = 0; indice2 < cant; indice2++) {
     if (butacas[indice2] === true) {
-      ocupadas += 1;
-    } else vacias += 1;
+      ocupadas++;
+    } else {
+      vacias++;
+    }
   }
 }
-
 ingresoButacas(cant);
 seleccion(cant);
 

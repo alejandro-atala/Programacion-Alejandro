@@ -35,8 +35,28 @@ let multiplicarArreglo = (array_A: number[], array_B: number[]): number[] => {
 cargarArray(array1, array2, array3, array4);
 
 multiplicarArreglo(array1, array2);
-console.log(resultado);
+console.log("El resultado de " + array1 + " * " + array2 + " es: " + resultado);
 multiplicarArreglo(resultado, array3);
-console.log(resultado);
+console.log(
+  "El resultado de " +
+    array1 +
+    " * " +
+    array2 +
+    " * " +
+    array3 +
+    " es: " +
+    resultado
+);
 multiplicarArreglo(resultado, array4);
-console.log(resultado);
+console.log(
+  "El resultado de " +
+    array1 +
+    " * " +
+    array2 +
+    " * " +
+    array3 +
+    " * " +
+    array4 +
+    " es: " +
+    resultado
+);
