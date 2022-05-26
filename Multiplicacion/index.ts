@@ -19,10 +19,10 @@ let multiplicarArreglo = (array_A: number[], array_B: number[]): number[] => {
   return resultado;
 };
 
-console.log(cargarArray(array1, 1));
-console.log(cargarArray(array2, 2));
-console.log(cargarArray(array3, 3));
-console.log(cargarArray(array4, 4));
+cargarArray(array1, 1);
+cargarArray(array2, 2);
+cargarArray(array3, 3);
+cargarArray(array4, 4);
 
 multiplicarArreglo(array1, array2);
 console.log("El resultado de " + array1 + " * " + array2 + " es: " + resultado);
