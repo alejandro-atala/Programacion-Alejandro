@@ -5,24 +5,11 @@ let array4: number[] = new Array(3);
 let resultado: number[] = new Array(3);
 let i = 0;
 
-let cargarArray = (
-  array_1: number[],
-  array_2: number[],
-  array_3: number[],
-  array_4: number[]
-) => {
+let cargarArray = (array: number[], num: number): number[] => {
   for (i = 0; i < 3; i++) {
-    array_1[i] = Number(prompt("Ingrese numeros en array 1"));
+    array[i] = Number(prompt("Ingrese numeros en array " + num));
   }
-  for (i = 0; i < 3; i++) {
-    array_2[i] = Number(prompt("Ingrese numeros en array 2"));
-  }
-  for (i = 0; i < 3; i++) {
-    array_3[i] = Number(prompt("Ingrese numeros en array 3"));
-  }
-  for (i = 0; i < 3; i++) {
-    array_4[i] = Number(prompt("Ingrese numeros en array 4"));
-  }
+  return array;
 };
 
 let multiplicarArreglo = (array_A: number[], array_B: number[]): number[] => {
@@ -32,7 +19,10 @@ let multiplicarArreglo = (array_A: number[], array_B: number[]): number[] => {
   return resultado;
 };
 
-cargarArray(array1, array2, array3, array4);
+console.log(cargarArray(array1, 1));
+console.log(cargarArray(array2, 2));
+console.log(cargarArray(array3, 3));
+console.log(cargarArray(array4, 4));
 
 multiplicarArreglo(array1, array2);
 console.log("El resultado de " + array1 + " * " + array2 + " es: " + resultado);

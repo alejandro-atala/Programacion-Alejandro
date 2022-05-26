@@ -1,9 +1,7 @@
 let cant: number = Number(prompt("Ingrese cantidad de butacas"));
-//let ingreso : number= 0;
 let butacas: boolean[] = new Array(cant);
 let vacias: number = 0;
 let ocupadas: number = 0;
-//let indice: number;
 
 function ingresoButacas(cant: number) {
   for (let indice = 0; indice < cant; indice++) {
