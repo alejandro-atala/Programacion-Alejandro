@@ -14,9 +14,10 @@ function Promedio(cantidad: number, edades: number[]): number {
   let suma: number = 0;
 
   for (i = 0; i < cantidad; i++) {
+    edades[i] = Aleatorio(3, 7);
     suma = suma + Aleatorio(3, 7);
-    console.log(edad);
   }
+  console.log(edades);
   promedio = suma / cantidad;
   return promedio;
 }
