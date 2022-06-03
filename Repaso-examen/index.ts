@@ -1,62 +1,63 @@
 let comisionA: number[] = [8, 5, 7, 10, 9, 2, 4, 8, 6, 8];
 let comisionB: number[] = [3, 6, 8, 5, 4, 7, 7, 4, 6, 8];
 let comisionC: number[] = [7, 6, 9, 8, 9, 8, 5, 7, 10, 9];
-let i: number = 0;
-let A: number = 0;
-let B: number = 0;
-let C: number = 0;
-let promedio: number = 0;
+let prom: number = 0;
+let a: number = 0;
+let b: number = 0;
+let c: number = 0;
 
 //--------------------------------------------
-function Promedio(comision: number[]): number {
+function calcularPromedio(comision: number[]): number {
   let suma: number = 0;
+  let i: number = 0;
 
   for (i = 0; i < comision.length; i++) {
     suma += comision[i];
   }
-  promedio = suma / comision.length;
-  return promedio;
+  prom = suma / comision.length;
+  return prom;
 }
 
 //-----------------------------------------------------------------------
-function mayorPromedio(comA: number[], comB: number[], comC: number[]) {
-  Promedio(comA);
-  A = promedio;
-  Promedio(comB);
-  B = promedio;
-  Promedio(comC);
-  C = promedio;
+function calcularMayorPromedio(comA: number[], comB: number[], comC: number[]) {
+  calcularPromedio(comA);
+  a = prom;
+  calcularPromedio(comB);
+  b = prom;
+  calcularPromedio(comC);
+  c = prom;
 
-  if (A > B && A > C) {
-    console.log("Comision A es el mayor " + A);
-  } else if (B > C && B > A) {
-    console.log("Comision B es el mayor " + B);
+  if (a > b && a > c) {
+    console.log("Comision A es el mayor " + a);
+  } else if (b > c && b > a) {
+    console.log("Comision B es el mayor " + b);
   } else {
-    console.log("Comision C es el mayor " + C);
+    console.log("Comision C es el mayor " + c);
   }
 }
 //------------------------------------------------------------------------
-function menorPromedio(comA: number[], comB: number[], comC: number[]) {
-  Promedio(comA);
-  A = promedio;
-  Promedio(comB);
-  B = promedio;
-  Promedio(comC);
-  C = promedio;
+function calcularMenorPromedio(comA: number[], comB: number[], comC: number[]) {
+  calcularPromedio(comA);
+  a = prom;
+  calcularPromedio(comB);
+  b = prom;
+  calcularPromedio(comC);
+  c = prom;
 
-  if (A < B && A < C) {
-    console.log("Comision A es el menor " + A);
-  } else if (B < C && B < A) {
-    console.log("Comision B es el menor " + B);
+  if (a < b && a < c) {
+    console.log("Comision A es el menor " + a);
+  } else if (b < c && b < a) {
+    console.log("Comision B es el menor " + b);
   } else {
-    console.log("Comision C es el menor " + C);
+    console.log("Comision C es el menor " + c);
   }
 }
 //------------------------------------------------------------------------
-function menor6(comision: number[]): number {
+function contarMenorA(comision: number[], num: number): number {
   let menor: number = 0;
+  let i: number = 0;
   for (i = 0; i < comision.length; i++) {
-    if (comision[i] < 6) {
+    if (comision[i] < num) {
       menor++;
     }
   }
@@ -64,18 +65,18 @@ function menor6(comision: number[]): number {
 }
 //------------------------------------------------------------------------
 
-function menorNota(comision: number[]): number {
+function calcularMenorNota(comision: number[]): number {
   let m = Math.min(...comision);
   return m;
 }
 
 //-------------------------------------------------------------------------
 
-mayorPromedio(comisionA, comisionB, comisionC);
-menorPromedio(comisionA, comisionB, comisionC);
-console.log("Comision A. Los menores de 6 son: " + menor6(comisionA));
-console.log("Comision B. Los menores de 6 son: " + menor6(comisionB));
-console.log("Comision C. Los menores de 6 son: " + menor6(comisionC));
-console.log("Menor nota comision A es: " + menorNota(comisionA));
-console.log("Menor nota comision B es: " + menorNota(comisionB));
-console.log("Menor nota comision C es: " + menorNota(comisionC));
+calcularMayorPromedio(comisionA, comisionB, comisionC);
+calcularMenorPromedio(comisionA, comisionB, comisionC);
+console.log("Comision A. Los menores de 6 son: " + contarMenorA(comisionA, 6));
+console.log("Comision B. Los menores de 6 son: " + contarMenorA(comisionB, 6));
+console.log("Comision C. Los menores de 6 son: " + contarMenorA(comisionC, 6));
+console.log("Menor nota comision A es: " + calcularMenorNota(comisionA));
+console.log("Menor nota comision B es: " + calcularMenorNota(comisionB));
+console.log("Menor nota comision C es: " + calcularMenorNota(comisionC));
