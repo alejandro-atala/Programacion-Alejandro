@@ -1,6 +1,7 @@
 let cantidadProductos: number = Number(prompt("Ingrese cantidad de productos"));
 
 let arrayProductos: number[] = new Array(cantidadProductos);
+
 //------------------------------------------------------------------
 function cargarArray(array: number[], longitud: number) {
   let i: number = 0;
@@ -27,7 +28,18 @@ function calcularCompra(array: number[], cantidad: number) {
   }
 }
 //--------------------------------------------------------------------
+function aplicarIva(array: number[], cantidad: number) {
+  let i: number = 0;
+  let suma: number = 0;
+  for (i = 0; i < cantidad; i++) {
+    suma += array[i] * 1.21;
+  }
+  console.log("El valor con IVA es: $" + suma);
+}
 
 cargarArray(arrayProductos, cantidadProductos);
 
 calcularCompra(arrayProductos, cantidadProductos);
+
+let arrayProductos2 = arrayProductos.slice();
+aplicarIva(arrayProductos2, cantidadProductos);
