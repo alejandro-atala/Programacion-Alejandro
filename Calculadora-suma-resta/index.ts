@@ -47,7 +47,7 @@ rotulo1.innerHTML = "Ingrese el numero ";
 rotulo2.innerHTML = "Ingrese el numero ";
 rotulo3.innerHTML = "Ingrese 1 Suma, 2 Resta";
 
-let input1 = document.getElementById("input1");
+let input1 = document.get("input1");
 let input2 = document.getElementById("input2");
 let operacion = document.getElementById("input3");
 
