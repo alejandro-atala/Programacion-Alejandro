@@ -4,9 +4,9 @@ let Aleatorio = (min: number, max: number): number => {
   return edad;
 };
 
-let cantidad: number = Aleatorio(1, 270);
+let canti: number = Aleatorio(1, 270);
 let i: number = 0;
-let array: number[] = new Array(cantidad);
+let array: number[] = new Array(canti);
 let menores: number = 0;
 let mayores: number = 0;
 
@@ -27,7 +27,7 @@ let seleccion = (array: number[], cant: number) => {
   }
 };
 console.log(cargarPersonas(array, cantidad));
-seleccion(array, cantidad);
+seleccion(array, canti);
 console.log("Los menores son: " + menores);
 console.log(`Los mayores son ${mayores}`);
 console.log(`La cantidad de personas es ${cantidad}`);
