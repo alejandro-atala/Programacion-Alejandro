@@ -1,6 +1,7 @@
 //RECUPERATORIO 1er examen
 //Realizado el 24/6/22
 //Comentarios y switch 26/6/22
+//MODIFIQUE LA FORMA DE MOSTRAR LOS PRODUCTOS ---- 28/6/22 ----
 
 //Ingreso de datos, declaracion de algunas variables y arrays
 let cantidad: number = Number(
@@ -31,20 +32,21 @@ function cargarProductos(productos: string[], precio: number[], cant: number) {
   //Muestra por consola el mensaje con los datos solicitados
   msj = "Detalle de la compra: ";
   msj += " Usted compro " + unit + " productos...   .";
-  for (i = 0; i < cant; i++) {
-    msj +=
-      " Precio de " +
-      cantProducto[i] +
-      " " +
-      productos[i] +
-      " es $ " +
-      precio[i] * cantProducto[i] +
-      ", " +
-      precio[i] +
-      " c/u.";
-  }
   msj += " El total de su compra es de $ " + total;
   console.log(msj);
+  for (i = 0; i < cant; i++) {
+    console.log(
+      " Precio de " +
+        cantProducto[i] +
+        " " +
+        productos[i] +
+        " es $ " +
+        precio[i] * cantProducto[i] +
+        ", " +
+        precio[i] +
+        " c/u."
+    );
+  }
 }
 //Llamada a la funcion con parametros
 cargarProductos(nombreProductos, precioProducto, cantidad);
